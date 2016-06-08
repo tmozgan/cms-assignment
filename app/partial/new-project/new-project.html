@@ -1,0 +1,14 @@
+<div>
+
+    <h1>New project</h1>
+    <hr/>
+    <label>Title</label>
+    <input ng-model="project.title" type="text" class="form-control"/>
+    <br/>
+    <label>Content</label>
+    <textarea ng-model="project.body" class="form-control"></textarea>
+    <br/>
+    <div class="btn btn-success pull-right" ng-disabled="isCreating" ng-click="onCreateClick()">Create</div>
+
+
+</div>

@@ -1,0 +1,44 @@
+<div>
+
+    <h1>Projects</h1>
+    <div class="btn btn-primary" ui-sref="new-project">Create new</div>
+    <br/>
+    <br/>
+    <br/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Date
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="project in projects">
+                <td>
+                    {{project.title}}
+                </td>
+                <td>
+                    {{project.dateCreated | date:'dd.MM.yyyy hh.MM'}}
+                </td>
+                <td>
+                    <div
+                        class="btn btn-xs btn-danger"
+                        ng-click="deleteClick(project._id)">
+                        Delete
+                    </div>
+                    <div
+                        class="btn btn-xs btn-info"
+                        ui-sref="edit-project({id:project._id})">
+                        Edit
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
